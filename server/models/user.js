@@ -14,7 +14,7 @@ const userSchema = new mongooes.Schema({
         required: true
     },
     mobile_no: {
-        type:Number,
+        type: Number,
         required: true
     },
     password: {
