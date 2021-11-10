@@ -9,24 +9,14 @@ import NotFound from "./MyComponent/NotFound";
 function App() {
   return (
     <>
-<<<<<<< HEAD
-    <Router>
-    <TopBar></TopBar>
-    <Switch>
-          <Route exact path="/" component = {Login} />
-          <Route exact path="/register" component = {Register}/>
-    </Switch>
-    </Router>
-=======
       <Router>
         <TopBar></TopBar>
         <Switch>
-          <Route exact path="/" component={Register} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/" component={Login} />
           <Route component={NotFound} />
         </Switch>
       </Router>
->>>>>>> 6ef94a30c5d6b78903204d81870357a5e6b45303
     </>
   );
 }
