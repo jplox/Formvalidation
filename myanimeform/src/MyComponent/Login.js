@@ -2,10 +2,6 @@ function Login(){
     return(
         <>
         <div className="columns"><div className="column main"><input name="form_key" type="hidden" value="xcpFdshemaaOt8IR" />
-
-
-
-
 <div className="login-container">
 <div className="container">
 <div className="main">
@@ -22,12 +18,12 @@ function Login(){
     <div className="block-title">
     </div>
     <div className="block-content" aria-labelledby="block-customer-login-heading">
-        <form className="form form-login" action="https://www.metroshoes.net/customer/account/loginPost/referer/aHR0cHM6Ly93d3cubWV0cm9zaG9lcy5uZXQvbWVuLXNob2VzLmh0bWw%2C/" method="post" id="login-form" novalidate="novalidate">
+        <form className="form form-login" action="https://www.metroshoes.net/customer/account/loginPost/referer/aHR0cHM6Ly93d3cubWV0cm9zaG9lcy5uZXQvbWVuLXNob2VzLmh0bWw%2C/" method="post" id="login-form" noValidate="novalidate">
             <input name="form_key" type="hidden" value="xcpFdshemaaOt8IR" />            <fieldset className="fieldset login" data-hasrequired="* Required Fields">
                 <div className="field email required">
                     <label className="label" htmlFor="email"><span>Email</span></label>
                     <div className="control">
-                        <input name="login[username]" value="" autoComplete="off" id="email" type="email" className="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" aria-required="true" />
+                        <input name="login[username]"  autoComplete="off" id="email" type="email" className="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" aria-required="true" />
                     </div>
                 </div>
                 <div className="field password required">
