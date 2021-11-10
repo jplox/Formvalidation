@@ -6420,3 +6420,10 @@ p{
 
   margin-bottom: 0rem;
 }
+
+.actions-toolbar p{
+  font-size: 13px
+}
+.actions-toolbar a{
+  text-decoration: none;
+}

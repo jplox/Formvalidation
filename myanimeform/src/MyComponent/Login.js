@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Login(){
     return(
         <>
@@ -33,6 +34,7 @@ function Login(){
                     </div>
                 </div>
                 <div className="actions-toolbar">
+                <p>Not a user? <Link to="/register"> Register here</Link></p>
                     <div className="secondary"><a className="action remind" href="https://www.metroshoes.net/customer/account/forgotpassword/"><span className="forget">Forgot Your Password?</span></a></div>
                     <div className="primary"><button type="submit" className="action login primary" name="send" id="send2"><span>Login</span></button></div>
                 </div>

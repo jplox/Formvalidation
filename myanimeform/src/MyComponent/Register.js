@@ -14,7 +14,9 @@ const schema = yup.object().shape({
     password_confirmation: yup.string().oneOf([yup.ref("password"), null]),
     tnc: yup.bool().oneOf([true], 'Accept Ts & Cs is required')
 })
+if(schema === true){
 
+}
 function Register() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: yupResolver(schema)
@@ -34,7 +36,7 @@ function Register() {
         let passworddata = document.getElementById('password').value;
         let confirmpasdata = document.getElementById('password-confirmation').value;
 
-        axios.post('http://localhost:9001/user', {
+        axios.post('http://localhost:1109/user', {
             firstname: firstnamedata,
             lastname: lastnamedata,
             email: emaildata,
@@ -141,7 +143,7 @@ function Register() {
                                                         <p className="errormessage">{errors.tnc && "Agree terms and condition"}</p>
                                                     </div>
                                                     <div className="existuser">
-                                                        <p>Already user? <Link to="/login"> login here</Link></p>
+                                                        <p>Already user? <Link to="/"> login here</Link></p>
                                                     </div>
                                                     <div className="actions-toolbar">
                                                         <div className="primary">
