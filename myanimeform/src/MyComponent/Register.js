@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Redirect } from "react-router"
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -14,7 +15,7 @@ const schema = yup.object().shape({
     password_confirmation: yup.string().oneOf([yup.ref("password"), null]),
     tnc: yup.bool().oneOf([true], 'Accept Ts & Cs is required')
 })
-if(schema === true){
+if (schema === true) {
 
 }
 function Register() {
@@ -36,7 +37,7 @@ function Register() {
         let passworddata = document.getElementById('password').value;
         let confirmpasdata = document.getElementById('password-confirmation').value;
 
-        axios.post('http://localhost:1109/user', {
+        axios.post('http://localhost:1109/', {
             firstname: firstnamedata,
             lastname: lastnamedata,
             email: emaildata,
@@ -45,9 +46,14 @@ function Register() {
             password_confirmation: confirmpasdata
         }).then((res) => {
             console.log(res.data)
+            if (firstnamedata || lastnamedata || emaildata || mobiledata || passworddata || confirmpasdata) {
+                < Redirect to={{ path: "/login" }} />
+                alert("registered Sucessgully");
+            }
         }).catch((error) => {
             console.log(error)
         })
+
 
     }
 
@@ -143,7 +149,7 @@ function Register() {
                                                         <p className="errormessage">{errors.tnc && "Agree terms and condition"}</p>
                                                     </div>
                                                     <div className="existuser">
-                                                        <p>Already user? <Link to="/"> login here</Link></p>
+                                                        <p>Already user? <Link to="/login"> login here</Link></p>
                                                     </div>
                                                     <div className="actions-toolbar">
                                                         <div className="primary">

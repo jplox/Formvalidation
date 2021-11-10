@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
 const userRouter = require('./routes/user');  //path
-app.use('/user', userRouter);
+app.use('/', userRouter);
 app.listen(1109, () => {
 
   console.log("server running on port 1109...")
