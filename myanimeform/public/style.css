@@ -5821,6 +5821,7 @@
     display: inline-block;
     color: rgb(102, 102, 102);
     padding-left: 20px;
+    font-size: 13px;
   }
 }
 @media all {
@@ -6362,10 +6363,9 @@ input[type=checkbox] + label:before {
   border: 0.1em solid #000;
   border-radius: 0.2em;
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  padding-left: 0.2em;
-  padding-bottom: 0.3em;
+  width: 1.4em;
+  height: 1.1em;
+  padding-bottom: 1.3em;
   margin-right: 0.2em;
   vertical-align: bottom;
   color: transparent;
@@ -6414,6 +6414,7 @@ p{
 .errormessage{
   color: red;
   font-size: 11px;
+  display: inline-block;
 }
 
 .page-title-wrapper p{
