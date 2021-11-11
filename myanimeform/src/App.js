@@ -13,7 +13,7 @@ function App() {
         <TopBar></TopBar>
         <Switch>
           <Route exact path="/register" component={Register} />
-          <Route exact path="/" component={Login} />
+          <Route exact path="/login" component={Login} />
           <Route component={NotFound} />
         </Switch>
       </Router>

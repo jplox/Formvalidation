@@ -6307,7 +6307,6 @@
     border: 0px;
     vertical-align: baseline;
     text-decoration: none;
-    
   }
 }
 @media all {
@@ -6335,96 +6334,100 @@ input {
   margin: 5px;
 }
 .forget {
-    text-decoration: none;
-    color: red;
-    font-size: 12px;
+  text-decoration: none;
+  color: red;
+  font-size: 12px;
 }
-.container-fluid{
-    box-shadow: 0 15px 12px rgba(0,0,0,0.22);
+.container-fluid {
+  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.regcontainer{
+.regcontainer {
   padding: 10px;
 }
 
-input[type=checkbox] + label {
+input[type="checkbox"] + label {
   display: block;
   margin: 0.2em;
   cursor: pointer;
   padding: 0.2em;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   display: none;
 }
 
-input[type=checkbox] + label:before {
+input[type="checkbox"] + label:before {
   content: "\2714";
   border: 0.1em solid #000;
   border-radius: 0.2em;
+<<<<<<< HEAD
   display: inline-block;
   width: 1.4em;
   height: 1.1em;
   padding-bottom: 1.3em;
+=======
+  width: 1em;
+  height: 1em;
+>>>>>>> 438928ceb59b64ed863713cd9f6e93688163bb64
   margin-right: 0.2em;
   vertical-align: bottom;
   color: transparent;
-  transition: .2s;
+  transition: 0.5s;
 }
 
-input[type=checkbox] + label:active:before {
+input[type="checkbox"] + label:active:before {
   transform: scale(0);
 }
 
-input[type=checkbox]:checked + label:before {
+input[type="checkbox"]:checked + label:before {
   background-color: MediumSeaGreen;
   border-color: MediumSeaGreen;
   color: #fff;
 }
 
-input[type=checkbox]:disabled + label:before {
+input[type="checkbox"]:disabled + label:before {
   transform: scale(1);
   border-color: #aaa;
 }
 
-input[type=checkbox]:checked:disabled + label:before {
+input[type="checkbox"]:checked:disabled + label:before {
   transform: scale(1);
   background-color: #bfb;
   border-color: #bfb;
 }
 
-a{
+a {
   text-decoration: none;
 }
-p{
+p {
   font-family: inherit;
 }
 
-.action{
+.action {
   text-decoration: none;
 }
 
-.existuser a{
+.existuser a {
   text-decoration: none;
 }
-.existuser p{
+.existuser p {
   font-size: 13px;
 }
 
-.errormessage{
+.errormessage {
   color: red;
   font-size: 11px;
   display: inline-block;
 }
 
-.page-title-wrapper p{
-
+.page-title-wrapper p {
   margin-bottom: 0rem;
 }
 
-.actions-toolbar p{
-  font-size: 13px
+.actions-toolbar p {
+  font-size: 13px;
 }
-.actions-toolbar a{
+.actions-toolbar a {
   text-decoration: none;
 }

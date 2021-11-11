@@ -1,10 +1,29 @@
+<<<<<<< HEAD
 import { Link} from "react-router-dom";
+=======
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router"
+>>>>>>> 438928ceb59b64ed863713cd9f6e93688163bb64
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import userData from "../Helper/Axioshelpher";
 import { schema } from "../Helper/SchemaHelpher";
 
 
+<<<<<<< HEAD
+=======
+// schema for validation
+const schema = yup.object().shape({
+    firstname: yup.string().max(15).required("firstname is mandatory"),
+    lastname: yup.string().max(15).required("lastname is mandatory"),
+    email: yup.string().email().required(),
+    mobile_no: yup.number().required("invalid Ph.num").positive(),
+    password: yup.string().required().min(4).max(8),
+    password_confirmation: yup.string().oneOf([yup.ref("password"), null]),
+    tnc: yup.bool().oneOf([true], 'Accept Ts & Cs is required')
+})
+if (schema === true) {
+>>>>>>> 438928ceb59b64ed863713cd9f6e93688163bb64
 
 function Register() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
@@ -15,6 +34,40 @@ function Register() {
         console.log(data)
         reset();
     }
+<<<<<<< HEAD
+=======
+
+    //post data
+    function userData() {
+        let firstnamedata = document.getElementById('firstname').value;
+        let lastnamedata = document.getElementById('lastname').value;
+        let emaildata = document.getElementById('email_address').value;
+        let mobiledata = document.getElementById("mobile_no").value;
+        let passworddata = document.getElementById('password').value;
+        let confirmpasdata = document.getElementById('password-confirmation').value;
+
+        axios.post('http://localhost:1109/', {
+            firstname: firstnamedata,
+            lastname: lastnamedata,
+            email: emaildata,
+            mobile_no: mobiledata,
+            password: passworddata,
+            password_confirmation: confirmpasdata
+        }).then((res) => {
+            console.log(res.data)
+            if (firstnamedata || lastnamedata || emaildata || mobiledata || passworddata || confirmpasdata) {
+                < Redirect to={{ path: "/login" }} />
+                alert("registered Sucessgully");
+            }
+        }).catch((error) => {
+            console.log(error)
+        })
+
+
+    }
+
+
+>>>>>>> 438928ceb59b64ed863713cd9f6e93688163bb64
     return (
         <>
             <div className="regcontainer">
@@ -101,7 +154,7 @@ function Register() {
                                                     </div>
                                                         <span className="errormessage">{errors.tnc &&    "Agree terms and condition"}</span>
                                                     <div className="existuser">
-                                                        <p>Already user? <Link to="/"> login here</Link></p>
+                                                        <p>Already user? <Link to="/login"> login here</Link></p>
                                                     </div>
                                                     <div className="actions-toolbar">
                                                         <div className="primary">
