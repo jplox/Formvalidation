@@ -64,7 +64,7 @@ const Login = () => {
                             </div>
                             <div className="actions-toolbar">
                               <p>Not a user? <Link to="/register"> Register here</Link></p>
-                              <div className="secondary"><a className="action remind" ><span className="forget">Forgot Your Password?</span></a></div>
+                              <div className="secondary"><a className="action remind" href="/"><span className="forget">Forgot Your Password?</span></a></div>
                               <div className="primary"><button type="button" className="action login primary" name="send" id="send2" onClick={() => loginUserDetails()}><span>Login</span></button></div>
                             </div>
                           </fieldset>

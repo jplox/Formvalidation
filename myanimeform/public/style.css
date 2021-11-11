@@ -6361,15 +6361,11 @@ input[type="checkbox"] + label:before {
   content: "\2714";
   border: 0.1em solid #000;
   border-radius: 0.2em;
-<<<<<<< HEAD
   display: inline-block;
   width: 1.4em;
   height: 1.1em;
   padding-bottom: 1.3em;
-=======
-  width: 1em;
-  height: 1em;
->>>>>>> 438928ceb59b64ed863713cd9f6e93688163bb64
+
   margin-right: 0.2em;
   vertical-align: bottom;
   color: transparent;

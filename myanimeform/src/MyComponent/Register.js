@@ -13,6 +13,7 @@ function Register() {
     const SubmitformData = (data) => {    
         console.log(data)
         reset();
+        // alert('Registered succesfully')
     }
 
 

@@ -7,7 +7,7 @@ function userData() {
     let passworddata = document.getElementById('password').value;
     let confirmpasdata = document.getElementById('password-confirmation').value;
 
-    axios.post('http://localhost:1109/user', {
+    axios.post('http://localhost:1109/', {
         firstname: firstnamedata,
         lastname: lastnamedata,
         email: emaildata,
