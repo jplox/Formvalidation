@@ -1,7 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../models/user')
-
+const express = require('express'); // express module
+const router = express.Router();  //  router 
+const User = require('../models/user') // getting schema present in models folder
 
 /**
  * Getting All the Schema
@@ -13,21 +12,6 @@ router.get('/', async (req, res) => {
     }
     catch (err) {
         res.send('Error', err)
-    }
-})
-
-
-/**
- * For Getting Paticular Schema
- */
-
-router.get('/:id', async (req, res) => {
-    try {
-        const data = await User.findById(req.params.id);
-        res.json(data)
-    }
-    catch (err) {
-        res.send('invalid id') // if invalid id is given
     }
 })
 

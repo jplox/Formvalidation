@@ -1,3 +1,9 @@
+/**
+ * @description: Topbar in genaral is used for navigation purpose 
+ * @author: Ankith Rakesh
+ * @returns JSX
+ */
+
 function TopBar() {
   return (
     <>
@@ -9,7 +15,6 @@ function TopBar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-
             </ul>
           </div>
         </div>
@@ -18,4 +23,4 @@ function TopBar() {
   );
 }
 
-export default TopBar;
+export default TopBar;// exporting TopBar as default

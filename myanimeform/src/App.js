@@ -1,11 +1,15 @@
-import Login from "./MyComponent/Login";
-import Register from "./MyComponent/Register";
-import TopBar from "./MyComponent/TopBar";
+import Login from "./MyComponent/Login"; // ```jsx inside MyComponent
+import Register from "./MyComponent/Register"; // ```jsx inside MyComponent
+import TopBar from "./MyComponent/TopBar"; // ```jsx inside MyComponent
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import NotFound from "./MyComponent/NotFound";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom"; // import Router ,Switch , Route , Redirect from react-router-dom
+import NotFound from "./MyComponent/NotFound"; 
 
-
+/**
+ * @description:This function contains multiple JSX components 
+ * @author: Ankith Rakesh
+ * @returns mutiple JSX components i.e TopBar, Register , Login 
+ */
 function App() {
   return (
     <>

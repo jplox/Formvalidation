@@ -1,22 +1,27 @@
+/**
+ * imporing all the required modules i.e Link , useForm , yupResolver
+ */
 import { Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import userData from "../Helper/Axioshelpher";
-import { schema } from "../Helper/SchemaHelpher";
-
+import userData from "../Helper/Axioshelpher"; // importing userData function from helper folder
+import { schema } from "../Helper/SchemaHelpher";  // importing schema from helper folder
 
 function Register() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: yupResolver(schema)
     });
-
-    const SubmitformData = (data) => {    
+/**
+ * @description:After the register button is clicked the input form fields get reset and shows alert if and only if your input values are correct
+ * @param {String} data 
+ * @return JSX
+ */
+const SubmitformData = (data) => {    
         console.log(data)
-        reset();
-        // alert('Registered succesfully')
+        reset(); // input fields get reset here after giving valid values
+        alert('Registered succesfully') // alert
+        window.location.href= "http://localhost:1108/login"
     }
-
-
 
     return (
         <>
@@ -126,4 +131,4 @@ function Register() {
     );
 }
 
-export default Register;
+export default Register; // exporting Register function as default

@@ -1,19 +1,36 @@
+/**
+ * Importing all the required modules here i.e Link , useState and BaseController
+ */
+
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import BaseController from "../controllers"
 
+
+/**
+ * @author:Ankith Rakesh
+ * @description: This function is generally used for  authentication purpose.
+ * @returns:JSX
+ */
 const Login = () => {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState("");  // intial state
+  const [password, setPassword] = useState("");  
   const loginUserDetails = () => {
     const body = { user_name: userName, password }
     let url = "http://localhost:1109/login";
-
-    const success = (res) => {
+    /**
+     * @description:If its a valid user then moves to dashboard page
+     * @param {String} res 
+     */
+    const success = (res) => { 
       console.log("Success", res);
       window.location.href = "/dashboard"
 
     };
+    /**
+     * @description:If the login details are invalid then shows alert
+     * @param {String} err 
+     */
     const failure = (err) => {
       console.log("Error", err);
       alert("Invalid uername or password")
@@ -70,19 +87,16 @@ const Login = () => {
                           </fieldset>
                         </form>
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-
         </div>
       </div>
       </div>
     </>
   );
 }
-export default Login;
+export default Login;  // exporting Login by default

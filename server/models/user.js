@@ -1,9 +1,8 @@
-//schema
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // mongoose module
 const userSchema = new mongoose.Schema({
+    //schema creation and mentioning schematype and additional properties
     firstname: {
-        type: String,
-        
+        type: String, 
         trim:true,
         required: [true,"First name is required"]
     },
@@ -19,10 +18,7 @@ const userSchema = new mongoose.Schema({
         lowercase:true,
         required: [true,"email is required"],
         index:{
-
             unique:true
-
-
         }
     },
     mobile_no: {
