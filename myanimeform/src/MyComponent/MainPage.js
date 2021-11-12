@@ -1,6 +1,6 @@
-import ImageGallery from "./ImageGallery";
-import LowBar from "./LowBar";
-import './mainPage.css'
+import ImageGallery from "./MainPage components/ImageGallery";
+import LowBar from "./MainPage components/LowBar";
+
 
 function MainPage() {
   return (
