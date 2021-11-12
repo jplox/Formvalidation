@@ -1,7 +1,19 @@
+/**
+ * Importing all the required modules here i.e Link , useState
+ */
+
 import React from 'react'
 import FeaturedProducts from './LandingPage components/FeaturedProducts';
 import Heading from './LandingPage components/Heading';
 import OurProducts from './LandingPage components/OurProducts';
+
+/**
+ * @author:Ankith Rakesh
+ * @description: This class is generally used for Landing Page .
+ * @returns:JSX
+ */
+
+
 
 class LandingPage extends React.Component {
     //creating props

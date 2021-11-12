@@ -1,7 +1,7 @@
 import React from 'react';
 
-/**This is Heading Component which contains Main Heading part this WebPage
- * @returns {jsx} : This return Heading of this web page,
+/**This is Heading Component which contains Main section this WebPage
+ * @returns {jsx} : This return Featured Products of this web page,
  * This exports the default class
  */
 
