@@ -9,14 +9,22 @@ class Controller {
    * @param  {Function} failure
    * @public
    */
-  sendRequest(url, requestType, requestBody, isAuthenticated, authToken, success, failure) {
+  sendRequest(
+    url,
+    requestType,
+    requestBody,
+    isAuthenticated,
+    authToken,
+    success,
+    failure
+  ) {
     let body = {};
     body.headers = { "content-type": "application/json" };
     if (isAuthenticated) {
       body.headers = {
         "X-Access-Token": authToken,
         "content-type": "application/json",
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
       };
     }
     if (
@@ -30,7 +38,7 @@ class Controller {
     body.method = requestType;
     fetch(url, body)
       .then(function (response) {
-        console.log(response)
+        console.log(response);
 
         if (response.status === 204) {
           success({});
@@ -38,16 +46,13 @@ class Controller {
           response.json().then(function (data) {
             success(data);
           });
-        }
-        else if (response.status === 404) {
+        } else if (response.status === 404) {
           response.json().then(function (data) {
             failure(data);
           });
-        }
-        else {
+        } else {
           failure({});
         }
-
       })
       .catch(function (error) {
         failure(error);
