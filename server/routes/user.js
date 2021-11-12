@@ -17,6 +17,7 @@ router.get("/", async (req, res) => {
 /**
  * Post Schema
  */
+<<<<<<< HEAD
 router.post("/", async (req, res) => {
   const users = new User({
     //client side data
@@ -42,5 +43,43 @@ router.post("/login", (req, res) => {
     else res.status(415).send(err);
   });
 });
+=======
+router.post('/', async (req, res) => {
+    const users = new User({   //client side data
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        mobile_no: req.body.mobile_no,
+        password: req.body.password,
+        password_confirmation: req.body.password_confirmation,
+
+    })
+    try {
+        const a = await users.save();
+        res.json(a)
+        console.log(JSON.stringify(a))
+    }
+    catch (err) {
+        res.send(err)
+    }
+})
+router.post('/login', (req, res) => {
+    User.find(req.body, (err, data) => {
+        if (data.length) res.status(200).send(data)
+        else res.status(415).send(err)
+    })
+
+})
+
+
+
+
+
+
+
+
+
+
+>>>>>>> bf0b78889729225d1ac8275ccf217561dd13fdc9
 
 module.exports = router;

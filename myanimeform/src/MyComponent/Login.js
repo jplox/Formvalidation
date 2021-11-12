@@ -1,10 +1,16 @@
 /**
- * Importing all the required modules here i.e Link , useState and BaseController
+ * Importing all the required modules here i.e Link , useState
  */
 
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import React, { useState } from "react";
 import BaseController from "../controllers";
+=======
+import React, { useState } from 'react';
+import BaseController from "../controllers" //importing the Basecontroller module from the local location
+
+>>>>>>> bf0b78889729225d1ac8275ccf217561dd13fdc9
 
 /**
  * @author:Ankith Rakesh
@@ -12,7 +18,11 @@ import BaseController from "../controllers";
  * @returns:JSX
  */
 const Login = () => {
+<<<<<<< HEAD
   const [userName, setUserName] = useState(""); // intial state
+=======
+  const [userName, setUserName] = useState("");  // intial state
+>>>>>>> bf0b78889729225d1ac8275ccf217561dd13fdc9
   const [password, setPassword] = useState("");
   const loginUserDetails = () => {
     const body = { user_name: userName, password };
@@ -47,6 +57,7 @@ const Login = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <div className="columns">
         <div className="column main">
           <input name="form_key" type="hidden" value="xcpFdshemaaOt8IR" />
@@ -122,6 +133,32 @@ const Login = () => {
                                     }
                                   />
                                 </div>
+=======
+      {/* HTML of the Login form */}
+      <div className="columns"><div className="column main"><input name="form_key" type="hidden" value="xcpFdshemaaOt8IR" />
+        <div className="login-container">
+          <div className="container">
+            <div className="main">
+              <div className="page-title-wrapper">
+                <h1 className="page-title">
+                  <span className="base">Login</span>
+                </h1>
+                <p>Welcome back! Please enter email and password</p>
+              </div>
+              <div className="columns">
+                <div className="column main">
+                  <div className="login-container">
+                    <div className="block block-customer-login">
+                      <div className="block-title">
+                      </div>
+                      <div className="block-content" aria-labelledby="block-customer-login-heading">
+                        <form className="form form-login" method="post" id="login-form" noValidate="novalidate">
+                          <input name="form_key" type="hidden" value="xcpFdshemaaOt8IR" />            <fieldset className="fieldset login" data-hasrequired="* Required Fields">
+                            <div className="field email required">
+                              <label className="label" htmlFor="email"><span>Email</span></label>
+                              <div className="control">
+                                <input name="login[username]" autoComplete="off" id="email" type="email" className="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" aria-required="true" onChange={(event) => setUserName(event.target.value)} />
+>>>>>>> bf0b78889729225d1ac8275ccf217561dd13fdc9
                               </div>
                               <div className="actions-toolbar">
                                 <p>
@@ -144,9 +181,21 @@ const Login = () => {
                                   </button>
                                 </div>
                               </div>
+<<<<<<< HEAD
                             </fieldset>
                           </form>
                         </div>
+=======
+                            </div>
+                            <div className="actions-toolbar">
+                              <p>Not a user? <Link to="/register"> Register here</Link></p>
+                              <div className="secondary"><a className="action remind" href="/"><span className="forget">Forgot Your Password?</span></a></div>
+                              {/* passing the loginUserData function to the buttom using onClick  */}
+                              <div className="primary"><button type="button" className="action login primary" name="send" id="send2" onClick={() => loginUserDetails()}><span>Login</span></button></div>
+                            </div>
+                          </fieldset>
+                        </form>
+>>>>>>> bf0b78889729225d1ac8275ccf217561dd13fdc9
                       </div>
                     </div>
                   </div>
