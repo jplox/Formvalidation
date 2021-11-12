@@ -38,7 +38,6 @@ router.post('/', async (req, res) => {
     }
 })
 router.post('/login', (req, res) => {
-    console.log(req.body)
     User.find(req.body, (err, data) => {
         if (data.length) res.status(200).send(data)
         else res.status(415).send(err)

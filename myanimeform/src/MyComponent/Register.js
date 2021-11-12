@@ -11,16 +11,16 @@ function Register() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: yupResolver(schema)
     });
-/**
- * @description:After the register button is clicked the input form fields get reset and shows alert if and only if your input values are correct
- * @param {String} data 
- * @return JSX
- */
-const SubmitformData = (data) => {    
+    /**
+     * @description:After the register button is clicked the input form fields get reset and shows alert if and only if your input values are correct
+     * @param {String} data 
+     * @return JSX
+     */
+    const SubmitformData = (data) => {
         console.log(data)
         reset(); // input fields get reset here after giving valid values
         alert('Registered succesfully') // alert
-        window.location.href= "http://localhost:1108/login"
+        window.location.href = "http://localhost:1108/login" //Redirecting to the login page after registration
     }
 
     return (
@@ -50,7 +50,7 @@ const SubmitformData = (data) => {
                                                         <div className="htmlFor-group">
                                                             <label className="label" htmlFor="firstname"><span>First Name <span className="errormessage"> {errors.firstname && "Only Alphabets are allowed"} </span> </span> </label>
                                                             <div className="control">
-                                                                <input type="text" id="firstname" name="firstname" title="First Name" className="htmlFor-control  validate-alpha input-text " autoComplete="off"  aria-required="true" {...register('firstname') }  />
+                                                                <input type="text" id="firstname" name="firstname" title="First Name" className="htmlFor-control  validate-alpha input-text " autoComplete="off" aria-required="true" {...register('firstname')} />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -63,7 +63,7 @@ const SubmitformData = (data) => {
                                                             <div className="control">
                                                                 <input type="text" id="lastname" name="lastname" title="Last Name" className="htmlFor-control validate-alpha  input-text " autoComplete="off" aria-required="true" {...register('lastname')} />
                                                             </div>
-                                                            
+
                                                         </div>
                                                     </div>
                                                     {/* lastname */}
@@ -72,7 +72,7 @@ const SubmitformData = (data) => {
 
                                                 <fieldset className="fieldset create account" data-hasrequired="* Required Fields">
                                                     <div className="field email required">
-                                                        <label htmlFor="email_address" className="label"><span>Email</span><span className="errormessage"> {errors.email &&     "Enter valid email"} </span></label>
+                                                        <label htmlFor="email_address" className="label"><span>Email</span><span className="errormessage"> {errors.email && "Enter valid email"} </span></label>
                                                         <div className="control">
                                                             <input type="email" name="email" autoComplete="email" id="email_address" title="Email" className="input-text" data-validate="{required:true, 'validate-email':true}" aria-required="true" {...register('email')} required />
                                                         </div>
@@ -80,9 +80,9 @@ const SubmitformData = (data) => {
                                                     {/* email */}
 
                                                     <div className="field required">
-                                                        <label htmlFor="mobile_no" className="label"><span>Mobile Number</span> <span className="errormessage"> {errors.mobile_no &&        "Invalid mobile.no"} </span></label>
+                                                        <label htmlFor="mobile_no" className="label"><span>Mobile Number</span> <span className="errormessage"> {errors.mobile_no && "Invalid mobile.no"} </span></label>
                                                         <div className="control">
-                                                            <input type="tel" name="mobile_no" id="mobile_no" title="Mobile Number" className="input-text validate-numbe validate-number-range" data-validate="{required:true, 'validate-number':true, 'minlength':10, 'maxlength':10} " autoComplete="off" aria-required="true" {...register('mobile_no')} maxLength="10"/>
+                                                            <input type="tel" name="mobile_no" id="mobile_no" title="Mobile Number" className="input-text validate-numbe validate-number-range" data-validate="{required:true, 'validate-number':true, 'minlength':10, 'maxlength':10} " autoComplete="off" aria-required="true" {...register('mobile_no')} maxLength="10" />
                                                         </div>
                                                     </div>
                                                     {/* number */}
@@ -107,13 +107,13 @@ const SubmitformData = (data) => {
                                                         <input type="checkbox" id="fruit1" name="tnc" value="" {...register('tnc')} required />
                                                         <label htmlFor="fruit1">                 I accept the terms and conditions</label>
                                                     </div>
-                                                        <span className="errormessage">{errors.tnc &&    "Agree terms and condition"}</span>
+                                                    <span className="errormessage">{errors.tnc && "Agree terms and condition"}</span>
                                                     <div className="existuser">
                                                         <p>Already user? <Link to="/login"> login here</Link></p>
                                                     </div>
                                                     <div className="actions-toolbar">
                                                         <div className="primary">
-                                                           <button type="submit" className="action submit primary" title="Create an Account"  onClick={userData}>Register</button> 
+                                                            <button type="submit" className="action submit primary" title="Create an Account" onClick={userData}>Register</button>
                                                         </div>
                                                     </div>
                                                 </fieldset>

@@ -1,10 +1,10 @@
 /**
- * Importing all the required modules here i.e Link , useState and BaseController
+ * Importing all the required modules here i.e Link , useState
  */
 
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
-import BaseController from "../controllers"
+import BaseController from "../controllers" //importing the Basecontroller module from the local location
 
 
 /**
@@ -14,7 +14,7 @@ import BaseController from "../controllers"
  */
 const Login = () => {
   const [userName, setUserName] = useState("");  // intial state
-  const [password, setPassword] = useState("");  
+  const [password, setPassword] = useState("");
   const loginUserDetails = () => {
     const body = { user_name: userName, password }
     let url = "http://localhost:1109/login";
@@ -22,7 +22,7 @@ const Login = () => {
      * @description:If its a valid user then moves to dashboard page
      * @param {String} res 
      */
-    const success = (res) => { 
+    const success = (res) => {
       console.log("Success", res);
       window.location.href = "/dashboard"
 
@@ -48,6 +48,7 @@ const Login = () => {
 
   return (
     <>
+      {/* HTML of the Login form */}
       <div className="columns"><div className="column main"><input name="form_key" type="hidden" value="xcpFdshemaaOt8IR" />
         <div className="login-container">
           <div className="container">
@@ -82,6 +83,7 @@ const Login = () => {
                             <div className="actions-toolbar">
                               <p>Not a user? <Link to="/register"> Register here</Link></p>
                               <div className="secondary"><a className="action remind" href="/"><span className="forget">Forgot Your Password?</span></a></div>
+                              {/* passing the loginUserData function to the buttom using onClick  */}
                               <div className="primary"><button type="button" className="action login primary" name="send" id="send2" onClick={() => loginUserDetails()}><span>Login</span></button></div>
                             </div>
                           </fieldset>
