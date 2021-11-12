@@ -3,6 +3,7 @@
  @author: Ankith Rakesh
  * @returns JSX
  */
+import './mainPage.css'
 
 function LowBar() {
   return (
@@ -120,7 +121,7 @@ function LowBar() {
                     <p>
                       {" "}
                       Don’t miss to subscribe to our new feeds, kindly fill the
-                      form below. Reference site about getting best shoes, at 
+                      form below. Reference site about getting best shoes, at
                       information on its origins, as well.
                     </p>
                     {/* <!-- End form --> */}

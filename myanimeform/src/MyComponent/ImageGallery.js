@@ -3,13 +3,14 @@
  * @author: Ankith Rakesh
  * @returns JSX
  */
+import './mainPage.css'
 
 function ImageGallery() {
   return (
     <>
       <div className="movies_img">
         <div className="img-container">
-					<h1 className="heading primary" >Shoes Collection</h1>
+          <h1 className="heading primary" >Shoes Collection</h1>
           <img
             src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/546f98f8-7d9f-4802-bffe-5905d7975650/kyrie-8-ep-basketball-shoes-QJ01t9.png"
             className=" movie  "
